@@ -1,7 +1,8 @@
 <?php
+namespace Swoole;
 /**
  * Controller的基类，控制器基类
- * @package SwooleSystem
+ * @package Swoole\System
  * @subpackage MVC
  */
 class Controller
@@ -10,6 +11,8 @@ class Controller
     public $is_ajax = false;
     public $if_filter = true;
 
+    protected $tpl_var = array();
+    protected $template_dir;
     protected $trace = array();
     protected $model;
     protected $config;
@@ -19,6 +22,7 @@ class Controller
         $this->swoole = $swoole;
         $this->model = $swoole->model;
         $this->config = $swoole->config;
+        $this->template_dir = \Swoole::$app_path.'/templates/';
         if($this->if_filter) Filter::request();
     }
     /**
@@ -37,6 +41,27 @@ class Controller
         {
             $this->trace[$title] = $value;
         }
+    }
+    function fetch($tpl_file ='')
+    {
+        ob_start();
+        $this->display($tpl_file);
+        $content = ob_get_contents();
+        ob_end_clean();
+        return $content;
+    }
+    function assign($key, $value)
+    {
+        $this->tpl_var[$key] = $value;
+    }
+    function display($tpl_file ='')
+    {
+        if(empty($tpl_file))
+        {
+            $tpl_file = $this->swoole->env['mvc']['controller'].'/'.$this->swoole->env['mvc']['view'].'.php';
+        }
+        extract($this->tpl_var);
+        include $this->template_dir.$tpl_file;
     }
     /**
      * 显示运行时间和内存占用

@@ -38,6 +38,8 @@ class Swoole
     	'upload' => true, //上传组件
     	'user' => true,   //用户验证组件
     );
+    static $charset = 'utf-8';
+    static $setting = array();
     /**
      * Swoole类的实例
      * @var unknown_type
@@ -113,12 +115,15 @@ class Swoole
      */
     private function __init()
     {
-        #记录运行时间和内存占用情况
-        $this->env['runtime']['start'] = microtime(true);
-        $this->env['runtime']['mem'] = memory_get_usage();
-        #捕获错误信息
-        if(DEBUG=='on') set_error_handler('swoole_error_handler');
-		
+        #DEBUG
+        if(defined('DEBUG') and DEBUG=='on')
+        {
+            #捕获错误信息
+            set_error_handler('swoole_error_handler');
+            #记录运行时间和内存占用情况
+            $this->env['runtime']['start'] = microtime(true);
+            $this->env['runtime']['mem'] = memory_get_usage();
+        }
 		#初始化App环境
 		//为了兼容老的APPSPATH预定义常量方式
     	if(defined('APPSPATH'))
@@ -138,7 +143,7 @@ class Swoole
      * @param $lib
      * @return object $lib
      */
-    static function load($lib)
+    function load($lib)
     {
     	$this->$lib = $this->load->loadLib($lib);
     	return $this->$lib;
@@ -165,7 +170,7 @@ class Swoole
      * @param $url_processor
      * @return None
      */
-    function runMVC($url_processor)
+    function runMVC($url_processor = 'default')
     {
         $url_func = 'url_process_'.$url_processor;
         if(!function_exists($url_func))
@@ -201,11 +206,12 @@ class Swoole
             Swoole\Error::info('MVC Error',"Controller <b>{$mvc['controller']}</b> not exist!");
         }
         else require_once($controller_path);
-        if(!class_exists($mvc['controller']))
+        if(!class_exists($mvc['controller'], false))
         {
             Swoole\Error::info('MVC Error',"Controller Class <b>{$mvc['controller']}</b> not exist!");
         }
-        $controller = new $mvc['controller']($this);
+        $class = $mvc['controller'];
+        $controller = new $class($this);
         if(!is_callable(array($controller,$mvc['view'])))
         {
             header("HTTP/1.1 404 Not Found");

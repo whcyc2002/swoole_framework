@@ -22,7 +22,7 @@ class Error extends \Exception
 	public $error_msg;
 	static public $error_code;
     static public $stop = true;
-
+    static $echo_html = false;
 	/**
 	 * 错误对象
 	 * @param $error 如果为INT，则读取错误信息字典，否则设置错误字符串
@@ -66,8 +66,11 @@ class Error extends \Exception
 	 */
 	static function info($msg,$content)
 	{
-	    if(DEBUG=='off') return false;
-		$info = <<<HTMLS
+	    if(!defined('DEBUG') or DEBUG=='off') return false;
+        $info = '';
+
+        if(self::$echo_html)
+		$info .= <<<HTMLS
 <html>
 <head>
 <title>$msg</title>
@@ -103,16 +106,28 @@ margin: 			0 0 4px 0;
 		<h1>$msg</h1>
 		<p>$content</p><pre>
 HTMLS;
-        $trace = debug_backtrace();
-        foreach($trace as $t)
+        else
         {
-            $info .= "# line:{$t['line']}, call:{$t['class']}{$t['type']}{$t['function']}, file:{$t['file']} \n";
+            $info .= "$msg: $content\n";
         }
-		$info .= '</pre></div></body></html>';
+        $trace = debug_backtrace();
+        $info .= str_repeat('-', 100)."\n";
+        foreach($trace as $k=>$t)
+        {
+            if(empty($t['line'])) $t['line'] = 0;
+            if(empty($t['class'])) $t['class'] = '';
+            if(empty($t['type'])) $t['type'] = '';
+            if(empty($t['file'])) $t['file'] = 'unknow';
+            $info .= "#$k\tline:{$t['line']}\tcall:{$t['class']}{$t['type']}{$t['function']}\tfile:{$t['file']}\n";
+        }
+        $info .= str_repeat('-', 100)."\n";
+        if(self::$echo_html)
+        {
+            $info .= '</pre></div></body></html>';
+        }
 		if(self::$stop) exit($info);
 		else return $info;
 	}
-
 	static function warn($title,$content)
 	{
 		echo '<b>Warning </b>:'.$title."<br/> \n";

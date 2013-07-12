@@ -1,15 +1,16 @@
 <?php
+namespace Swoole;
 /**
  * 过滤类
  * 用于过滤过外部输入的数据，过滤数组或者变量中的不安全字符，以及HTML标签
  * @author Tianfeng.Han
  * @package SwooleSystem
  * @subpackage request_filter
- *
  */
 class Filter
 {
     static $error_url;
+    static $magic_quotes_gpc;
     public $mode;
 
     function __construct($mode='deny',$error_url=false)
@@ -91,11 +92,8 @@ class Filter
     }
     static function safe(&$content)
     {
-        if(DBCHARSET=='utf8') $charset = 'utf-8';
-        else $charset = DBCHARSET;
-
         $content = stripslashes($content);
-        $content = html_entity_decode($content,ENT_QUOTES,$charset);
+        $content = html_entity_decode($content, ENT_QUOTES, \Swoole::$charset);
     }
     public static function filter_var($var,$type)
     {
@@ -118,7 +116,10 @@ class Filter
      */
     public static function filter_array($array)
     {
-        $magic = get_magic_quotes_gpc();
+        if(!is_array($array))
+        {
+            return false;
+        }
         $clean = array();
         foreach($array as $key=>$string)
         {
@@ -128,7 +129,7 @@ class Filter
             }
             else
             {
-                if($magic and DBCHARSET=='gbk')
+                if(self::$magic_quotes_gpc and DBCHARSET=='gbk')
                 {
                     $string = stripslashes($string);
                 }
@@ -150,11 +151,9 @@ class Filter
     public static function escape($string)
     {
         if(is_numeric($string)) return $string;
-        if(DBCHARSET=='utf8') $charset = 'utf-8';
-        else $charset = DBCHARSET;
-        $string = htmlspecialchars($string,ENT_QUOTES,$charset);
+        $string = htmlspecialchars($string,ENT_QUOTES,\Swoole::$charset);
 
-        if(DBCHARSET=='gbk') self::gbk_addslash($string);
+        if(\Swoole::$charset=='gbk') self::gbk_addslash($string);
         else self::addslash($string);
         return $string;
     }
@@ -225,4 +224,5 @@ class Filter
         $string = stripslashes($string);
     }
 }
-?>
+
+Filter::$magic_quotes_gpc = get_magic_quotes_gpc();

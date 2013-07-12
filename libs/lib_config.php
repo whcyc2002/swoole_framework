@@ -8,7 +8,7 @@ define("LIBPATH",str_replace("\\","/", __DIR__));
 if(PHP_OS=='WINNT') define("NL","\r\n");
 else define("NL","\n");
 define("BL","<br />".NL);
-
+require_once LIBPATH.'/system/Swoole.php';
 require_once LIBPATH.'/system/Loader.php';
 /**
  * 注册顶层命名空间到自动载入器
@@ -153,6 +153,36 @@ function error($error_id,$stop=true)
     elseif($stop) exit($error);
     else echo $error;
 }
+
+function url_process_default()
+{
+    $array = array('controller'=>'page', 'view'=>'index');
+    if(!empty($_GET["c"])) $array['controller']=$_GET["c"];
+    if(!empty($_GET["v"])) $array['view']=$_GET["v"];
+
+    $uri = parse_url($_SERVER['REQUEST_URI']);
+    if(empty($uri['path']) or $uri['path']=='/' or $uri['path']=='/index.php')
+    {
+        return $array;
+    }
+    $request = explode('/', trim($uri['path'], '/'), 3);
+    if(count($request) < 2)
+    {
+        return $array;
+    }
+    $array['controller']=$request[0];
+    $array['view']=$request[1];
+    if(is_numeric($request[2])) $_GET['id'] = $request[2];
+    else
+    {
+        Swoole\Tool::$url_key_join = '-';
+        Swoole\Tool::$url_param_join = '-';
+        Swoole\Tool::$url_add_end = '.html';
+        Swoole\Tool::$url_prefix = "/{$request[0]}/$request[1]/";
+        Swoole\Tool::url_parse_into($request[2],$_GET);
+    }
+    return $array;
+}
 /**
  * 错误信息输出处理
  */
@@ -173,7 +203,8 @@ function swoole_error_handler($errno, $errstr, $errfile, $errline)
             $level = 'Notice';
             break;
         default:
-            return;
+            $level = 'Unknow';
+            break;
     }
 
     $title = 'Swoole '.$level;
@@ -181,6 +212,6 @@ function swoole_error_handler($errno, $errstr, $errfile, $errline)
     $info .= '<b>Line:</b> '.$errline."<br />\n";
     $info .= '<b>Info:</b> '.$errstr."<br />\n";
     $info .= '<b>Code:</b> '.$errno."<br />\n";
-    echo Swoole\Error::info($title,$info);
+    echo Swoole\Error::info($title, $info);
 }
 

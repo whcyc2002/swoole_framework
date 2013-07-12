@@ -48,7 +48,9 @@ class HttpServer implements \Swoole_Server_Protocol
 
     function onStart($serv)
     {
-        define("WEBROOT", $this->config['server']['webroot']);
+        if (!defined('WEBROOT')) {
+            define('WEBROOT', $this->config['server']['webroot']);
+        }
         $this->log(self::SOFTWARE . ". running. on {$this->server->host}:{$this->server->port}");
     }
 
@@ -60,7 +62,6 @@ class HttpServer implements \Swoole_Server_Protocol
     function onConnect($serv, $client_id, $from_id)
     {
         $this->log("client[#$client_id@$from_id] connect");
-        $this->buffer[$client_id] = '';
     }
 
     function onClose($serv, $client_id, $from_id)
@@ -74,11 +75,9 @@ class HttpServer implements \Swoole_Server_Protocol
         if (!is_file($ini_file)) exit("Swoole AppServer配置文件错误($ini_file)\n");
         $config = parse_ini_file($ini_file, true);
         /*--------------Server------------------*/
-        if (empty($config['server']['driver'])) $config['server']['driver'] = 'SelectTCP'; //BlockTCP,EventTCP,SelectTCP
-        if (empty($config['server']['software'])) $config['server']['software'] = $_SERVER['server_software'];
-        if (empty($config['server']['host'])) $config['server']['host'] = '0.0.0.0';
-        if (empty($config['server']['port'])) $config['server']['port'] = 8888;
-        if (empty($config['server']['processor_num'])) $config['server']['processor_num'] = 1; //启用的进程数目
+        if (empty($config['server']['webroot'])) {
+            $config['server']['webroot'] = 'http://' . $this->server->host . ':' . $this->server->port;
+        }
         /*--------------Session------------------*/
         if (empty($config['session']['cookie_life'])) $config['session']['cookie_life'] = 86400; //保存SESSION_ID的cookie存活时间
         if (empty($config['session']['session_life'])) $config['session']['session_life'] = 1800; //Session在Cache中的存活时间
@@ -103,7 +102,11 @@ class HttpServer implements \Swoole_Server_Protocol
 
     protected function checkData($client_id, $data)
     {
-        $this->buffer[$client_id] .= $data;
+        if (!isset($this->buffer[$client_id])) {
+            $this->buffer[$client_id] = $data;
+        } else {
+            $this->buffer[$client_id] .= $data;
+        }
         //HTTP结束符
         if (substr($data, -4, 4) != "\r\n\r\n") {
             return false;
@@ -237,8 +240,10 @@ class HttpServer implements \Swoole_Server_Protocol
         $request->head = $this->parse_head($headerLines);
         $url_info = parse_url($request->meta['uri']);
         $request->meta['path'] = $url_info['path'];
-        $request->meta['fragment'] = $url_info['fragment'];
-        parse_str($url_info['query'], $request->get);
+        if (isset($url_info['fragment'])) $request->meta['fragment'] = $url_info['fragment'];
+        if (isset($url_info['query'])) {
+            parse_str($url_info['query'], $request->get);
+        }
         //POST请求,有http body
         if ($request->meta['method'] === 'POST') {
             $cd = strstr($request->head['Content-Type'], 'boundary');

@@ -3,11 +3,14 @@
  * 导入所有controller
  * @return unknown_type
  */
-function import_all_controller($apps_path = null)
+function import_all_controller($apps_path)
 {
-    $apps_path = !empty($$apps_path)?:APPSPATH;
     $d = dir($apps_path.'/controllers');
-    while($file=$d->read())
+    if(empty($d))
+    {
+        return false;
+    }
+    while($file = $d->read())
     {
         $name = basename($file,'.php');
         //不符合命名规则

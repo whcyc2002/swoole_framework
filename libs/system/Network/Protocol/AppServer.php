@@ -10,9 +10,9 @@ class AppServer extends HttpServer
 
     function onStart($serv)
     {
+        parent::onStart($serv);
         $this->apps_path = $this->config['apps']['apps_path'];
         \import_all_controller($this->apps_path);
-        parent::onStart($serv);
     }
     function urlRouter($urlpath)
     {
@@ -24,10 +24,6 @@ class AppServer extends HttpServer
         {
             return $array;
         }
-        elseif($mvc = \url_process_regx($urlpath))
-        {
-            return $mvc;
-        }
         $request = explode('/', trim($urlpath, '/'), 3);
         if(count($request) < 2)
         {
@@ -35,14 +31,18 @@ class AppServer extends HttpServer
         }
         $array['controller']=$request[0];
         $array['view']=$request[1];
-        if(is_numeric($request[2])) $_GET['id'] = $request[2];
-        else
+
+        if(isset($request[2]))
         {
-            Swoole\Tool::$url_key_join = '-';
-            Swoole\Tool::$url_param_join = '-';
-            Swoole\Tool::$url_add_end = '.html';
-            Swoole\Tool::$url_prefix = WEBROOT."/{$request[0]}/$request[1]/";
-            Swoole\Tool::url_parse_into($request[2],$_GET);
+            if(is_numeric($request[2])) $_GET['id'] = $request[2];
+            else
+            {
+                Swoole\Tool::$url_key_join = '-';
+                Swoole\Tool::$url_param_join = '-';
+                Swoole\Tool::$url_add_end = '.html';
+                Swoole\Tool::$url_prefix = WEBROOT."/{$request[0]}/$request[1]/";
+                Swoole\Tool::url_parse_into($request[2],$_GET);
+            }
         }
         return $array;
     }
