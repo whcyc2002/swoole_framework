@@ -6,7 +6,9 @@ PHP高级Web开发框架，内置应用服务器。提供统一注册树，数�
 
 创建swoole.phar包
 -----
+```bash
 php ./libs/code/phar.php
+```
 
 应用服务器
 -----

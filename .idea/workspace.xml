@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c9a94b63-3c09-44f5-94ce-e46c30360ef5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.php" afterPath="$PROJECT_DIR$/server.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webframework.iml" afterPath="$PROJECT_DIR$/.idea/webframework.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="webframework.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,7 +18,7 @@
     <file path="/a.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373612663424" ignored="false" />
     <file path="/phar.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373874358074" ignored="false" />
     <file path="$PROJECT_DIR$/swoole.phar/libs/system/Config.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373874705616" ignored="false" />
-    <file path="/README.md" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373875084286" ignored="false" />
+    <file path="/README.md" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373875258656" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +55,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.9144144">
+            <state line="11" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.35923424">
               <folding />
             </state>
           </provider>
@@ -342,7 +339,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.9144144">
+        <state line="11" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.35923424">
           <folding />
         </state>
       </provider>
