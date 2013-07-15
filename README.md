@@ -39,68 +39,6 @@ Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
 Benchmarking 127.0.0.1 (be patient)
-apr_socket_recv: Connection refused (111)
-htf@htf-ThinkPad-T430:~/workspace/ext_swoole$ ab -c 100 -n 100000 http://127.0.0.1:8888/hello/index/
-This is ApacheBench, Version 2.3 <$Revision: 655654 $>
-Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
-Licensed to The Apache Software Foundation, http://www.apache.org/
-
-Benchmarking 127.0.0.1 (be patient)
-Completed 10000 requests
-Completed 20000 requests
-Completed 30000 requests
-Completed 40000 requests
-Completed 50000 requests
-Completed 60000 requests
-Completed 70000 requests
-Completed 80000 requests
-Completed 90000 requests
-Completed 100000 requests
-Finished 100000 requests
-
-
-Server Software:        Swoole
-Server Hostname:        127.0.0.1
-Server Port:            8888
-
-Document Path:          /hello/index/
-Document Length:        11 bytes
-
-Concurrency Level:      100
-Time taken for tests:   17.226 seconds
-Complete requests:      100000
-Failed requests:        0
-Write errors:           0
-Total transferred:      27500000 bytes
-HTML transferred:       1100000 bytes
-Requests per second:    5805.06 [#/sec] (mean)
-Time per request:       17.226 [ms] (mean)
-Time per request:       0.172 [ms] (mean, across all concurrent requests)
-Transfer rate:          1558.98 [Kbytes/sec] received
-
-Connection Times (ms)
-              min  mean[+/-sd] median   max
-Connect:        0    0   0.2      0       9
-Processing:     4   17  31.7     15    1023
-Waiting:        3   17  31.6     15    1017
-Total:          4   17  31.8     16    1025
-
-Percentage of the requests served within a certain time (ms)
-  50%     16
-  66%     16
-  75%     17
-  80%     17
-  90%     19
-  95%     20
-  98%     23
-  99%     25
- 100%   1025 (longest request)
-htf@htf-ThinkPad-T430:~/workspace/ext_swoole$ ab -c 100 -n 100000 http://127.0.0.1:8888/hello/index/
-This is ApacheBench, Version 2.3 <$Revision: 655654 $>
-Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
-Licensed to The Apache Software Foundation, http://www.apache.org/
-
-Benchmarking 127.0.0.1 (be patient)
 Completed 10000 requests
 Completed 20000 requests
 Completed 30000 requests
