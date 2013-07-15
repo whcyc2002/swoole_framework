@@ -22,7 +22,6 @@ make
 sudo make install
 ```
 然后修改php.ini加入extension=swoole.so
-server.php
 ```php
 <?php
 define('DEBUG', 'on');
