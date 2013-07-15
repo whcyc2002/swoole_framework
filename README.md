@@ -6,12 +6,23 @@ PHP高级Web开发框架，内置应用服务器。提供统一注册树，数�
 
 创建swoole.phar包
 -----
-```bash
+```
 php ./libs/code/phar.php
 ```
 
 应用服务器
 -----
+需要安装swoole扩展。
+```
+git clone https://github.com/matyhtf/swoole.git
+cd swoole
+phpize
+./configure
+make
+sudo make install
+```
+然后修改php.ini加入extension=swoole.so
+server.php
 ```php
 <?php
 define('DEBUG', 'on');
