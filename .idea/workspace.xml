@@ -2,32 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9a94b63-3c09-44f5-94ce-e46c30360ef5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/htf.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webframework.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/system/Network/Protocol/AppServer.php" afterPath="$PROJECT_DIR$/libs/system/Network/Protocol/AppServer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/system/Controller.php" afterPath="$PROJECT_DIR$/libs/system/Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/system/Error.php" afterPath="$PROJECT_DIR$/libs/system/Error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/system/Filter.php" afterPath="$PROJECT_DIR$/libs/system/Filter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/system/Network/Protocol/HttpServer.php" afterPath="$PROJECT_DIR$/libs/system/Network/Protocol/HttpServer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/system/Request.php" afterPath="$PROJECT_DIR$/libs/system/Request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/system/Swoole.php" afterPath="$PROJECT_DIR$/libs/system/Swoole.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/system/Template.php" afterPath="$PROJECT_DIR$/libs/system/Template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/function/cli.php" afterPath="$PROJECT_DIR$/libs/function/cli.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/controllers/hello.php" afterPath="$PROJECT_DIR$/apps/controllers/hello.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/lib_config.php" afterPath="$PROJECT_DIR$/libs/lib_config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/code/ns_warrper.php" afterPath="$PROJECT_DIR$/libs/code/ns_warrper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/swoole.ini" afterPath="$PROJECT_DIR$/swoole.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.php" afterPath="$PROJECT_DIR$/server.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webframework.iml" afterPath="$PROJECT_DIR$/.idea/webframework.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="webframework.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373610285775" ignored="false" />
+    <file path="/Dummy.txt" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373874311885" ignored="false" />
     <file path="/hello.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373610458595" ignored="false" />
     <file path="/Error.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373612081172" ignored="false" />
     <file path="/swoole.ini" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373610829215" ignored="false" />
@@ -37,6 +19,9 @@
     <file path="/Request.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373612729486" ignored="false" />
     <file path="/Filter.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373611758845" ignored="false" />
     <file path="/a.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373612663424" ignored="false" />
+    <file path="/phar.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373874358074" ignored="false" />
+    <file path="$PROJECT_DIR$/swoole.phar/libs/system/Config.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373874705616" ignored="false" />
+    <file path="/README.md" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373875084286" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +45,35 @@
     <favorites_list name="webframework" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="phar.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libs/code/phar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="39" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.9333333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.9144144">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="80" selection-end="109" vertical-scroll-proportion="-2.9">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -86,6 +99,9 @@
         <option value="$PROJECT_DIR$/libs/system/Network/Protocol/AppServer.php" />
         <option value="$PROJECT_DIR$/libs/system/Network/Protocol/HttpServer.php" />
         <option value="$PROJECT_DIR$/libs/system/Request.php" />
+        <option value="$PROJECT_DIR$/server.php" />
+        <option value="$PROJECT_DIR$/libs/code/phar.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -122,7 +138,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -141,58 +156,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="system" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webframework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,10 +166,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.PHP" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../taobao" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
@@ -220,13 +190,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-7" width="1857" height="1088" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2498615" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2498615" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2531856" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -234,11 +204,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -304,23 +274,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/apps/controllers/hello.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="110" selection-end="110" vertical-scroll-proportion="-6.766667">
-          <folding />
-        </state>
+        <state line="7" column="1" selection-start="110" selection-end="110" vertical-scroll-proportion="-6.766667" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/function/cli.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="5" selection-start="193" selection-end="193" vertical-scroll-proportion="-10.633333">
-          <folding />
-        </state>
+        <state line="11" column="5" selection-start="193" selection-end="193" vertical-scroll-proportion="-10.633333" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/swoole.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="86" selection-end="93" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="7" selection-start="86" selection-end="93" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_c.php">
@@ -332,35 +296,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/system/Error.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="40" selection-start="2234" selection-end="2234" vertical-scroll-proportion="0.49483353">
-          <folding />
-        </state>
+        <state line="110" column="40" selection-start="2234" selection-end="2234" vertical-scroll-proportion="0.49483353" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/system/Filter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="42" selection-start="3708" selection-end="3708" vertical-scroll-proportion="0.12858783">
-          <folding />
-        </state>
+        <state line="131" column="42" selection-start="3708" selection-end="3708" vertical-scroll-proportion="0.12858783" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/system/Network/Protocol/HttpServer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="40" selection-start="8032" selection-end="8032" vertical-scroll-proportion="-1.45338">
-          <folding />
-        </state>
+        <state line="243" column="40" selection-start="8032" selection-end="8032" vertical-scroll-proportion="-1.45338" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/system/Request.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.13432837">
-          <folding />
-        </state>
+        <state line="12" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.13432837" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/system/Network/Protocol/AppServer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="54" selection-end="54" vertical-scroll-proportion="-0.0">
+        <state line="4" column="0" selection-start="54" selection-end="54" vertical-scroll-proportion="-0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Phar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="602" column="33" selection-start="21658" selection-end="21658" vertical-scroll-proportion="0.34498835">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/code/phar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="39" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.9333333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="80" selection-end="109" vertical-scroll-proportion="-2.9">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.9144144">
           <folding />
         </state>
       </provider>
