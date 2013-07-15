@@ -43,7 +43,7 @@ class HttpServer implements \Swoole_Server_Protocol
     function log($msg)
     {
         //$this->log->info($msg);
-        echo '[' . date('Y-m-d H:i:s') . "]\t{$msg}\n";
+        //echo '[' . date('Y-m-d H:i:s') . "]\t{$msg}\n";
     }
 
     function onStart($serv)

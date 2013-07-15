@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9a94b63-3c09-44f5-94ce-e46c30360ef5" name="Default" comment="">
+    <list default="true" id="c9a94b63-3c09-44f5-94ce-e46c30360ef5" name="Default" comment="压册数据">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/swoole.phar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/code/swoole.phar" afterPath="$PROJECT_DIR$/libs/code/swoole.phar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/system/Network/Protocol/HttpServer.php" afterPath="$PROJECT_DIR$/libs/system/Network/Protocol/HttpServer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/system/Network/Server.php" afterPath="$PROJECT_DIR$/libs/system/Network/Server.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/class/swoole/net/SwooleServer.class.php" afterPath="$PROJECT_DIR$/libs/class/swoole/net/SwooleServer.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.php" afterPath="$PROJECT_DIR$/server.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webframework.iml" afterPath="$PROJECT_DIR$/.idea/webframework.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="webframework.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373874311885" ignored="false" />
+    <file path="/Dummy.txt" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373887204253" ignored="false" />
     <file path="/hello.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373610458595" ignored="false" />
     <file path="/Error.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373612081172" ignored="false" />
     <file path="/swoole.ini" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373610829215" ignored="false" />
@@ -18,7 +26,11 @@
     <file path="/a.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373612663424" ignored="false" />
     <file path="/phar.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373874358074" ignored="false" />
     <file path="$PROJECT_DIR$/swoole.phar/libs/system/Config.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373874705616" ignored="false" />
-    <file path="/README.md" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373875258656" ignored="false" />
+    <file path="/README.md" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373887115040" ignored="false" />
+    <file path="$PROJECT_DIR$/libs/code/swoole.phar/system/Config.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373875562921" ignored="false" />
+    <file path="/server.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373876443493" ignored="false" />
+    <file path="/SwooleServer.class.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373876327892" ignored="false" />
+    <file path="/Server.php" changelist="c9a94b63-3c09-44f5-94ce-e46c30360ef5" time="1373880587045" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,35 +54,7 @@
     <favorites_list name="webframework" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="phar.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/code/phar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="39" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.9333333">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.35923424">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="80" selection-end="109" vertical-scroll-proportion="-2.9">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -94,10 +78,12 @@
         <option value="$PROJECT_DIR$/libs/system/Filter.php" />
         <option value="$PROJECT_DIR$/libs/system/Error.php" />
         <option value="$PROJECT_DIR$/libs/system/Network/Protocol/AppServer.php" />
-        <option value="$PROJECT_DIR$/libs/system/Network/Protocol/HttpServer.php" />
         <option value="$PROJECT_DIR$/libs/system/Request.php" />
-        <option value="$PROJECT_DIR$/server.php" />
         <option value="$PROJECT_DIR$/libs/code/phar.php" />
+        <option value="$PROJECT_DIR$/libs/class/swoole/net/SwooleServer.class.php" />
+        <option value="$PROJECT_DIR$/libs/system/Network/Server.php" />
+        <option value="$PROJECT_DIR$/libs/system/Network/Protocol/HttpServer.php" />
+        <option value="$PROJECT_DIR$/server.php" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -187,13 +173,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-7" width="1857" height="1088" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2498615" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2531856" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16842106" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -269,53 +255,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/controllers/hello.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="1" selection-start="110" selection-end="110" vertical-scroll-proportion="-6.766667" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/function/cli.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="5" selection-start="193" selection-end="193" vertical-scroll-proportion="-10.633333" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swoole.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="86" selection-end="93" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_c.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="26" selection-start="6502" selection-end="6502" vertical-scroll-proportion="0.3283582">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/system/Error.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="40" selection-start="2234" selection-end="2234" vertical-scroll-proportion="0.49483353" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/system/Filter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="42" selection-start="3708" selection-end="3708" vertical-scroll-proportion="0.12858783" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/system/Network/Protocol/HttpServer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="40" selection-start="8032" selection-end="8032" vertical-scroll-proportion="-1.45338" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/system/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="243" selection-end="243" vertical-scroll-proportion="0.13432837" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/system/Network/Protocol/AppServer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="54" selection-end="54" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Phar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="602" column="33" selection-start="21658" selection-end="21658" vertical-scroll-proportion="0.34498835">
@@ -325,21 +264,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/code/phar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="39" selection-start="78" selection-end="78" vertical-scroll-proportion="-1.9333333">
+        <state line="2" column="39" selection-start="78" selection-end="78" vertical-scroll-proportion="0.06659012">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/lib_config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/class/swoole/net/SwooleServer.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="197" column="30" selection-start="4179" selection-end="4199" vertical-scroll-proportion="-18.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="phar://$PROJECT_DIR$/libs/code/swoole.phar/class/swoole/net/SwooleServer.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="13" selection-start="629" selection-end="629" vertical-scroll-proportion="-9.666667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="173" column="14" selection-start="4587" selection-end="4587" vertical-scroll-proportion="0.34498835">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/system/Error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="31" selection-start="363" selection-end="363" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/system/Network/Server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="25" selection-start="441" selection-end="441" vertical-scroll-proportion="-10.633333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="phar://$PROJECT_DIR$/libs/code/swoole.phar/system/Error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="9" selection-start="2849" selection-end="2849" vertical-scroll-proportion="0.94172496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="phar://$PROJECT_DIR$/libs/code/swoole.phar/system/Network/Protocol/HttpServer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="8" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.44638693">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="phar://$PROJECT_DIR$/libs/code/swoole.phar/system/Network/Protocol/AppServer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="6" selection-start="97" selection-end="97" vertical-scroll-proportion="0.16899768">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/system/Network/Protocol/AppServer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="54" selection-end="54" vertical-scroll-proportion="-0.96666664">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/system/Network/Protocol/HttpServer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="5" selection-start="908" selection-end="908" vertical-scroll-proportion="-17.266666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="phar://$PROJECT_DIR$/libs/code/swoole.phar/system/Network/Server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="24" selection-start="733" selection-end="740" vertical-scroll-proportion="0.34498835">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="80" selection-end="109" vertical-scroll-proportion="-2.9">
+        <state line="1" column="0" selection-start="6" selection-end="443" vertical-scroll-proportion="0.03329506">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.35923424">
+        <state line="87" column="12" selection-start="2315" selection-end="2315" vertical-scroll-proportion="0.6734234">
           <folding />
         </state>
       </provider>
