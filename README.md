@@ -3,15 +3,30 @@ Swoole应用服务器
 框架
 -----
 PHP高级Web开发框架，内置应用服务器。提供统一注册树，数据库操作，模板，Cache，日志，队列，上传管理，用户管理等丰富的功能特性。
+使用内置应用服务器，可节省每次请求代码来的额外消耗。连接池技术可以很好的帮助存储系统节省连接资源。
+
+赞助Swoole开源项目
+-----
+捐赠地址：http://me.alipay.com/swoole
 
 创建swoole.phar包
 -----
-```bash
+```
 php ./libs/code/phar.php
 ```
 
 应用服务器
 -----
+需要安装swoole扩展。
+```
+git clone https://github.com/matyhtf/swoole.git
+cd swoole
+phpize
+./configure
+make
+sudo make install
+```
+然后修改php.ini加入extension=swoole.so
 ```php
 <?php
 define('DEBUG', 'on');
