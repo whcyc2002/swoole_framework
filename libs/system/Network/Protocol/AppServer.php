@@ -5,14 +5,30 @@ use Swoole;
 require LIBPATH.'/function/cli.php';
 class AppServer extends HttpServer
 {
-    public $router_function;
+    protected $router_function;
     protected $apps_path;
 
     function onStart($serv)
     {
         parent::onStart($serv);
-        $this->apps_path = $this->config['apps']['apps_path'];
+        if(empty($this->apps_path))
+        {
+            if(!empty($this->config['apps']['apps_path']))
+            {
+                $this->apps_path = $this->config['apps']['apps_path'];
+            }
+            else
+            {
+                throw new \Exception("AppServer require apps_path");
+            }
+        }
+
+
         \import_all_controller($this->apps_path);
+    }
+    function setAppPath($path)
+    {
+        $this->apps_path = $path;
     }
     function urlRouter($urlpath)
     {

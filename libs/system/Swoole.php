@@ -302,3 +302,14 @@ class Swoole
         $server->run($server_conf['processor_num']);
     }
 }
+
+interface ILog
+{
+    /**
+     * 写入日志
+     * @param $type 类型
+     * @param $msg  内容
+     * @return unknown_type
+     */
+    function put($type, $msg);
+}

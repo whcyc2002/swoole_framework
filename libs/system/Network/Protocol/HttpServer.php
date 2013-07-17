@@ -40,10 +40,9 @@ class HttpServer implements \Swoole_Server_Protocol
         $this->log = $log;
     }
 
-    function log($msg)
+    function log($msg, $type = 'INFO')
     {
-        //$this->log->info($msg);
-        //echo '[' . date('Y-m-d H:i:s') . "]\t{$msg}\n";
+        $this->log->put($type, $msg);
     }
 
     function onStart($serv)
@@ -86,6 +85,7 @@ class HttpServer implements \Swoole_Server_Protocol
         if (empty($config['apps']['url_route'])) $config['apps']['url_route'] = 'url_route_default';
         if (empty($config['apps']['auto_reload'])) $config['apps']['auto_reload'] = 0;
         if (empty($config['apps']['charset'])) $config['apps']['charset'] = 'utf-8';
+
         /*--------------Access------------------*/
         $this->deny_dir = array_flip(explode(',', $config['access']['deny_dir']));
         $this->static_dir = array_flip(explode(',', $config['access']['static_dir']));
