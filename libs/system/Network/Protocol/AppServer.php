@@ -2,7 +2,7 @@
 namespace Swoole\Network\Protocol;
 use Swoole;
 
-require LIBPATH.'/function/cli.php';
+require_once LIBPATH.'/function/cli.php';
 class AppServer extends HttpServer
 {
     protected $router_function;
@@ -22,9 +22,6 @@ class AppServer extends HttpServer
                 throw new \Exception("AppServer require apps_path");
             }
         }
-
-
-        \import_all_controller($this->apps_path);
     }
     function setAppPath($path)
     {
@@ -99,7 +96,7 @@ class AppServer extends HttpServer
             //修改时间大于加载时的时间
             if($fstat['mtime']>$php->env['controllers'][$mvc['controller']]['time'])
             {
-                runkit_import($controller_file);
+                runkit_import($controller_file, RUNKIT_IMPORT_CLASS_METHODS|RUNKIT_IMPORT_OVERRIDE);
                 $php->env['controllers'][$mvc['controller']]['time'] = time();
                 $this->log("reload controller ".$mvc['controller']);
             }

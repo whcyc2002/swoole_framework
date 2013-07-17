@@ -3,7 +3,7 @@ global $php;
 if(empty($php->config['db']['master']) and defined('DBHOST'))
 {
 	$php->config['db']['master'] = array(
-			'type'    => Swoole\Factory\Database::TYPE_MYSQL, //Database Driver，可以选择PdoDB , MySQL, MySQL2(MySQLi) , AdoDb(需要安装adodb插件)
+			'type'    => Swoole\Database::TYPE_MYSQL, //Database Driver，可以选择PdoDB , MySQL, MySQL2(MySQLi) , AdoDb(需要安装adodb插件)
 			'host'    => DBHOST,
 			'port'    => DBPORT,
 			'dbms'    => DBMS,
@@ -17,7 +17,6 @@ if(empty($php->config['db']['master']) and defined('DBHOST'))
 	if(defined('DBPERSISTENT')) $php->config['db']['persistent'] = DBPERSISTENT;
 	if(defined('DBSETNAME')) $php->config['db']['ifsetname'] = DBSETNAME;
 	else $php->config['db']['ifsetname'] = false;
-		
 }
 
 $db = new Swoole\Database($php->config['db']['master']);

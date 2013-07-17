@@ -118,7 +118,7 @@ HTMLS;
             if(empty($t['class'])) $t['class'] = '';
             if(empty($t['type'])) $t['type'] = '';
             if(empty($t['file'])) $t['file'] = 'unknow';
-            $info .= "#$k\tline:{$t['line']}\tcall:{$t['class']}{$t['type']}{$t['function']}\tfile:{$t['file']}\n";
+            $info .= "#$k line:{$t['line']} call:{$t['class']}{$t['type']}{$t['function']}\tfile:{$t['file']}\n";
         }
         $info .= str_repeat('-', 100)."\n";
         if(self::$echo_html)

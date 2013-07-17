@@ -29,11 +29,7 @@ class MySQL implements \Swoole\IDatabase
 	function connect()
 	{
 		$db_config = $this->config;
-		if(isset($db_config['persistent']) and $db_config['persistent'])
-			$this->conn = \mysql_pconnect($db_config['host'].':'.$db_config['port'], $db_config['user'],$db_config['passwd']) or die(\mysql_error());
-		else
-			$this->conn = \mysql_connect($db_config['host'].':'.$db_config['port'], $db_config['user'],$db_config['passwd']) or die(\mysql_error());
-		
+        $this->conn = \mysql_connect($db_config['host'].':'.$db_config['port'], $db_config['user'],$db_config['passwd']) or die(\mysql_error());
 		\mysql_select_db($db_config['name'],$this->conn) or die(\mysql_error($this->conn));
 		if($db_config['setname']) \mysql_query('set names '.$db_config['charset'],$this->conn) or die(\mysql_error($this->conn));
 	}
@@ -45,7 +41,11 @@ class MySQL implements \Swoole\IDatabase
 	{
 		\mysql_real_escape_string($sql, $this->conn);
 		$res = \mysql_query($sql,$this->conn);
-		if(!$res) echo Swoole\Error::info("SQL Error", \mysql_error($this->conn)."<hr />$sql");
+		if(!$res)
+        {
+            echo Swoole\Error::info("SQL Error", \mysql_error($this->conn)."<hr />$sql");
+            return false;
+        }
 		return new MySQLRecord($res);
 	}
 	/**

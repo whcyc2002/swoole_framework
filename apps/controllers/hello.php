@@ -5,4 +5,9 @@ class hello extends Swoole\Controller
     {
         return "hello world";
     }
+    function dbtest()
+    {
+        $res = $this->swoole->db->query("show tables");
+        var_dump($res->fetchall());
+    }
 }

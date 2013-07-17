@@ -11,4 +11,4 @@ $AppSvr->setLogger(new Swoole\Log\EchoLog(true));
 
 $server = new \Swoole\Network\Server('0.0.0.0', 8888);
 $server->setProtocol($AppSvr);
-$server->run(array('worker_num' => 4, 'max_request' => 5000));
+$server->run(array('worker_num' => 1, 'max_request' => 5000));

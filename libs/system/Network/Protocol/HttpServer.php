@@ -1,6 +1,8 @@
 <?php
 namespace Swoole\Network\Protocol;
 require_once LIBPATH . '/class/swoole/net/SwooleServer.class.php';
+require_once LIBPATH.'/system/Request.php';
+require_once LIBPATH.'/system/Response.php';
 /**
  * HTTP Server
  * @author Tianfeng.Han
@@ -33,6 +35,7 @@ class HttpServer implements \Swoole_Server_Protocol
         $mimes = require(LIBPATH . '/data/mimes.php');
         $this->mime_types = array_flip($mimes);
         $this->config = $config;
+        \Swoole\Error::$echo_html = true;
     }
 
     function setLogger($log)
@@ -276,6 +279,7 @@ class HttpServer implements \Swoole_Server_Protocol
 
     function http_error($code, $response, $content = '')
     {
+
         $response->send_http_status($code);
         $response->head['Content-Type'] = 'text/html';
         $response->body = \Swoole\Error::info(\Response::$HTTP_HEADERS[$code], "<p>$content</p><hr><address>" . self::SOFTWARE . " at {$this->server->host} Port {$this->server->port}</address>");
